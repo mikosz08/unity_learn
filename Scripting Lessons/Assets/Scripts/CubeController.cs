@@ -6,7 +6,7 @@ public class CubeController : MonoBehaviour
     /*   Move the Cube based on the mouse input 
      *   -> based on mouse move on X and Y axis = move Cube along X/Y axis by pos/neg value respectively
      *   -> while mouse is moving on Y axis, rotate Main Camera along X axis, while mouse is moving on X axis, rotate Cube on Y axis
-     *   -> by pressing 'M' button increase Cube's localScale by x amount
+     *   -> by pressing 'R' button increase Cube's localScale by x amount
      */
 
     private float inputX;
@@ -50,7 +50,6 @@ public class CubeController : MonoBehaviour
         {
             ResizeCube();
         }
-
     }
 
     private void MoveCube()
@@ -70,7 +69,7 @@ public class CubeController : MonoBehaviour
 
     private void ResizeCube()
     {
-        if (Input.GetKey(KeyCode.M))
+        if (Input.GetKey(KeyCode.R))
         {
             var s = cubeScaleIncrease;
             cube.transform.localScale = cube.transform.localScale + new Vector3(s, s, s);
