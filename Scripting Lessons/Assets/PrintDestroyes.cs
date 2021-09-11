@@ -12,10 +12,7 @@ public class PrintDestroyes : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        destroyesCounterText = GetComponent<TMP_Text>();
     }
-
-
 
     public void PrintDestroyed(string countText)
     {

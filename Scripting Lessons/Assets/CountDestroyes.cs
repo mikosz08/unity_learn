@@ -4,7 +4,7 @@ using UnityEngine;
 public class CountDestroyes : MonoBehaviour
 {
 
-    private int destroyes = 0;
+    private static int destroyes = 0;
 
     public static CountDestroyes instance;
 
@@ -19,13 +19,12 @@ public class CountDestroyes : MonoBehaviour
         set { destroyes = value; }
     }
 
-    public int AddDestory()
+    public void AddDestory()
     {
         Destroyes++;
-        return Destroyes;
     }
 
-    public void ClearDestoryes()
+    public void ClearDestory()
     {
         Destroyes = 0;
     }

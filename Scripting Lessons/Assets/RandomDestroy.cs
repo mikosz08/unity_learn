@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RandomDestroy : MonoBehaviour
@@ -22,7 +20,7 @@ public class RandomDestroy : MonoBehaviour
     {
         time += Time.deltaTime;
 
-        if (time > sec)
+        if (time > sec && printer != null)
         {
             time = 0.0f;
             RollRandomDestroy();
@@ -36,8 +34,8 @@ public class RandomDestroy : MonoBehaviour
 
         if (roll > 7)
         {
-            Destroy(this.gameObject);
             counter.AddDestory();
+            Destroy(this.gameObject);
         }
 
     }
